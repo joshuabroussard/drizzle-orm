@@ -161,6 +161,7 @@ export const schemaToTypeScript = (
 					patched = patched.startsWith('varbinary(') ? 'varbinary' : patched;
 					patched = patched.startsWith('int(') ? 'int' : patched;
 					patched = patched.startsWith('double(') ? 'double' : patched;
+					patched = patched.startsWith('bigint') ? 'bigint' : patched;
 					return patched;
 				})
 				.filter((type) => {
